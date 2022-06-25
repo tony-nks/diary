@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
 class Statistics extends StatefulWidget {
@@ -10,8 +11,19 @@ class Statistics extends StatefulWidget {
 
 class _StatisticsState extends State<Statistics> {
 
+  late ValueNotifier<double> valueNotifier;
+  final double newValue = 50;
+
+
+  @override
+  void initState() {
+    super.initState();
+    valueNotifier = ValueNotifier(0.0);
+  }
+
   @override
   Widget build(BuildContext context) {
+    valueNotifier.value = newValue;
     return Container(
       height: 250,
       width: 330,
@@ -24,7 +36,7 @@ class _StatisticsState extends State<Statistics> {
             bottomLeft: Radius.circular(10),
           )),
       child: Padding(
-        padding: const EdgeInsets.all(28.0),
+        padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 28.0),
         child: Column(
           children: [
             // первая часть
@@ -96,21 +108,131 @@ class _StatisticsState extends State<Statistics> {
                 const SimpleCircularProgressBar(
                   progressStrokeWidth: 15,
                   backStrokeWidth: 5,
-                  maxValue: 100,
 
+                  maxValue: 100,
                 )
               ],
             ),
             Divider(),
             // вторая часть нижняя
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Carbs'),
-
-                    Text('12g left')
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Stack(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 70,
+                        ),
+                        Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
+                        Positioned(
+                          top: 19,
+                          left: -10,
+                          child: LinearPercentIndicator(
+                            width: 75.0,
+                            lineHeight: 7.0,
+                            percent: 0.8,
+                            backgroundColor: Colors.grey[100],
+                            linearGradient: LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: <Color>[
+                                Colors.blue,
+                                Colors.white,
+                              ], // Gradient from https://learnui.design/tools/gradient-generator.html
+                              tileMode: TileMode.mirror,
+                            ),
+                            barRadius: Radius.circular(25),
+                          ),
+                        ),
+                        Positioned(
+                            top: 30,
+                            child: Text('12g left', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11, fontFamily: "BalooChettan2", color: Colors.grey),))
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Stack(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 70,
+                        ),
+                        Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
+                        Positioned(
+                          top: 19,
+                          left: -10,
+                          child: LinearPercentIndicator(
+                            width: 75.0,
+                            lineHeight: 7.0,
+                            percent: 0.6,
+                            backgroundColor: Colors.grey[100],
+                            linearGradient: LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: <Color>[
+                                Colors.red.shade100,
+                                Colors.red,
+                              ], // Gradient from https://learnui.design/tools/gradient-generator.html
+                              tileMode: TileMode.mirror,
+                            ),
+                            barRadius: Radius.circular(25),
+                          ),
+                        ),
+                        Positioned(
+                            top: 30,
+                            child: Text('12g left', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11, fontFamily: "BalooChettan2", color: Colors.grey),))
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Stack(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 70,
+                        ),
+                        Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
+                        Positioned(
+                          top: 19,
+                          left: -10,
+                          child: LinearPercentIndicator(
+                            width: 75.0,
+                            lineHeight: 7.0,
+                            percent: 0.4,
+                            backgroundColor: Colors.grey[100],
+                            linearGradient: LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: <Color>[
+                                Colors.lightGreenAccent,
+                                Colors.green,
+                              ], // Gradient from https://learnui.design/tools/gradient-generator.html
+                              tileMode: TileMode.mirror,
+                            ),
+                            barRadius: Radius.circular(25),
+                          ),
+                        ),
+                        Positioned(
+                            top: 30,
+                            child: Text('12g left', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11, fontFamily: "BalooChettan2", color: Colors.grey),))
+                      ],
+                    ),
                   ],
                 ),
               ],
