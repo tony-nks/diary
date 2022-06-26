@@ -1,3 +1,4 @@
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:diary/widgets/app_bar.dart';
 import 'package:diary/widgets/body_measurement.dart';
 import 'package:diary/widgets/meals_today.dart';
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       // Текст Mediterranean diet - details
                       Padding(
-                        padding: const EdgeInsets.only(left: 28.0),
+                        padding: const EdgeInsets.only(left: 28.0, right: 28.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -52,28 +53,26 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            Expanded(
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 90,
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 90,
+                                ),
+                                Text(
+                                  'Details',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14,
+                                    color: Colors.blue,
+                                    fontFamily: "BalooChettan2",
                                   ),
-                                  Text(
-                                    'Details',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.blue,
-                                      fontFamily: "BalooChettan2",
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Icon(Icons.arrow_forward,
-                                      size: 16, color: Colors.blueGrey),
-                                ],
-                              ),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Icon(Icons.arrow_forward,
+                                    size: 16, color: Colors.blueGrey),
+                              ],
                             ),
                           ],
                         ),
@@ -216,6 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
             ],
           ),
+
         ),
       ),
     );
