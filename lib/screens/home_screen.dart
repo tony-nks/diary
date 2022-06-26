@@ -1,4 +1,5 @@
 import 'package:diary/widgets/app_bar.dart';
+import 'package:diary/widgets/body_measurement.dart';
 import 'package:diary/widgets/meals_today.dart';
 import 'package:diary/widgets/statistics.dart';
 import 'package:flutter/material.dart';
@@ -78,11 +79,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       // Статистика какая-то
-                      Padding(
-                        padding: const EdgeInsets.only(left: 28.0, right: 28.0),
-                        child: Statistics(),
-                      ),
-                      SizedBox(height: 20),
+                      Statistics(),
+                      SizedBox(height: 10),
 
                       // Текст Meals today - Customize
                       Padding(
@@ -129,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 10),
+
                       //Контейнеры красивые не понятные
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
@@ -161,13 +159,61 @@ class _HomeScreenState extends State<HomeScreen> {
                                 endColor: Color.fromRGBO(250, 84, 134, 1))
                           ],
                         ),
-                      )
+                      ),
+                      SizedBox(height: 10),
+                      // Текст Body measurement - Today
+                      Padding(
+                        padding: const EdgeInsets.only(left: 28.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 5.0, vertical: 10),
+                              child: Text(
+                                'Body measurement',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: Color.fromRGBO(55, 18, 100, 1),
+                                  fontFamily: "BalooChettan2",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'Today',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                      color: Colors.blue,
+                                      fontFamily: "BalooChettan2",
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Icon(Icons.arrow_forward,
+                                      size: 16, color: Colors.blueGrey),
+                                  SizedBox(
+                                    width: 30,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      BodyMeasurement(),
                     ],
                   ),
                 ),
               ),
 
-              //Body measurement - Today
+
             ],
           ),
         ),

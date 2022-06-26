@@ -10,7 +10,15 @@ class MealsToday extends StatelessWidget {
   final Color startColor;
   final Color endColor;
 
-  const MealsToday({Key? key, required this.image, required this.title, required this.kcal, required this.startColor, required this.endColor, required this.full}) : super(key: key);
+  const MealsToday(
+      {Key? key,
+      required this.image,
+      required this.title,
+      required this.kcal,
+      required this.startColor,
+      required this.endColor,
+      required this.full})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +44,15 @@ class MealsToday extends StatelessWidget {
                           colors: [
                             startColor,
                             endColor,
-                          ]
-                      ),
+                          ]),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(15),
                         topRight: Radius.circular(50),
                         bottomLeft: Radius.circular(15),
                         bottomRight: Radius.circular(15),
-                      )),
+                      ),
+
+                  ),
                 ),
                 Positioned(
                   top: -50,
@@ -66,8 +75,7 @@ class MealsToday extends StatelessWidget {
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontFamily: "BalooChettan2",
-                          fontSize: 18
-                      ),
+                          fontSize: 18),
                     )),
                 Positioned(
                     top: 75,
@@ -79,40 +87,49 @@ class MealsToday extends StatelessWidget {
                         fontFamily: "BalooChettan2",
                       ),
                     )),
-                full ? Positioned(
-                    top: 155,
-                    left: 20,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(kcal, style: TextStyle(color: Colors.white, fontFamily: "BalooChettan2", fontSize: 30),),
-                        Padding(
-                          padding: const EdgeInsets.all(7.0),
-                          child: Text('kcal', style: TextStyle(color: Colors.white, fontFamily: "BalooChettan2"),),
-                        ),
-                      ],
-                    )) : Positioned(
-          top: 140,
-          left: 30,
-              child: Container(
-              height: 45,
-              width: 45,
-          decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-        color: Colors.white60,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black87,
-            offset: Offset(3, 5),
-            spreadRadius: -2,
-            blurRadius: 15,
-          )
-        ]
-    ),
-    child: Icon(Icons.add))
-    )
-
-
+                full
+                    ? Positioned(
+                        top: 155,
+                        left: 20,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              kcal,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: "BalooChettan2",
+                                  fontSize: 30),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(7.0),
+                              child: Text(
+                                'kcal',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: "BalooChettan2"),
+                              ),
+                            ),
+                          ],
+                        ))
+                    : Positioned(
+                        top: 140,
+                        left: 30,
+                        child: Container(
+                            height: 45,
+                            width: 45,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: Colors.white60,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black87,
+                                    offset: Offset(3, 5),
+                                    spreadRadius: -2,
+                                    blurRadius: 15,
+                                  )
+                                ]),
+                            child: Icon(Icons.add)))
               ],
             ),
           ),
@@ -123,20 +140,22 @@ class MealsToday extends StatelessWidget {
               height: 20,
               width: 20,
               decoration: BoxDecoration(
-                  borderRadius:  BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(50),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black,
                       spreadRadius: 5,
                       blurRadius: 25,
                     )
-                  ]
-              ),
+                  ]),
             ),
           ),
           Positioned(
               left: 10,
-              child: Image.asset(image, scale: 8,)),
+              child: Image.asset(
+                image,
+                scale: 8,
+              )),
         ],
       ),
     );
