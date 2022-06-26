@@ -108,13 +108,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 10),
                       child: Text('Meals today', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Color.fromRGBO(55, 18, 100,  1), fontFamily: "BalooChettan2",),),
                     ),
-                    Expanded(
+                    Container(
                       child: Row(
                         children: [
-                          SizedBox(width: 90,),
                           Text('Customize', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.blue, fontFamily: "BalooChettan2",),),
                           SizedBox(width: 10,),
                           Icon(Icons.arrow_forward,  size: 16, color: Colors.blueGrey),
+                          SizedBox(width: 30,)
                         ],
                       ),
                     ),
