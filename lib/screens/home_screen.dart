@@ -1,3 +1,4 @@
+import 'package:diary/widgets/app_bar.dart';
 import 'package:diary/widgets/meals_today.dart';
 import 'package:diary/widgets/statistics.dart';
 import 'package:flutter/material.dart';
@@ -24,55 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // appBar
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12.0, vertical: 18),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    const Expanded(
-                      child: Text(
-                        'My Diary',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 30,
-                            color: Color.fromRGBO(55, 18, 100, 1),
-                            fontFamily: "BalooChettan2"),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Icon(
-                          Icons.arrow_back_ios,
-                          size: 16,
-                          color: Color.fromRGBO(55, 18, 100, 1),
-                        ),
-                        Row(
-                          children: [
-                            Icon(Icons.calendar_today_outlined,
-                                size: 14,
-                                color: Color.fromRGBO(55, 18, 100, 1)),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              '15 May',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color.fromRGBO(55, 18, 100, 1),
-                                  fontFamily: "BalooChettan2",
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                        Icon(Icons.arrow_forward_ios,
-                            size: 16, color: Color.fromRGBO(55, 18, 100, 1)),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+              CustomAppBar(),
               Expanded(
                 child: SizedBox(
                   child: ListView(
@@ -200,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               endColor: Color.fromRGBO(92, 96, 223, 1),
                             ),
                             MealsToday(
-                                full: true,
+                                full: false,
                                 image: 'assets/images/Snack.png',
                                 title: 'Snack',
                                 kcal: '800',
@@ -212,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-              )
+              ),
 
               //Body measurement - Today
             ],

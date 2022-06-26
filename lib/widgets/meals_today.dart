@@ -79,28 +79,7 @@ class MealsToday extends StatelessWidget {
                         fontFamily: "BalooChettan2",
                       ),
                     )),
-
-                // Positioned(
-                //     top: 140,
-                //     left: 30,
-                //     child: Container(
-                //         height: 45,
-                //         width: 45,
-                //         decoration: BoxDecoration(
-                //           borderRadius: BorderRadius.circular(50),
-                //           color: Colors.white60,
-                //           boxShadow: [
-                //             BoxShadow(
-                //               color: Colors.black87,
-                //               offset: Offset(3, 5),
-                //               spreadRadius: -2,
-                //               blurRadius: 15,
-                //             )
-                //           ]
-                //         ),
-                //         child: Icon(Icons.add))
-                // ),
-                Positioned(
+                full ? Positioned(
                     top: 155,
                     left: 20,
                     child: Row(
@@ -112,7 +91,28 @@ class MealsToday extends StatelessWidget {
                           child: Text('kcal', style: TextStyle(color: Colors.white, fontFamily: "BalooChettan2"),),
                         ),
                       ],
-                    )),
+                    )) : Positioned(
+          top: 140,
+          left: 30,
+              child: Container(
+              height: 45,
+              width: 45,
+          decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+        color: Colors.white60,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black87,
+            offset: Offset(3, 5),
+            spreadRadius: -2,
+            blurRadius: 15,
+          )
+        ]
+    ),
+    child: Icon(Icons.add))
+    )
+
+
               ],
             ),
           ),
