@@ -13,6 +13,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  var _bottomNavIndex = 0;
+  final iconList = <IconData>[
+    Icons.brightness_5,
+    Icons.brightness_4,
+    Icons.brightness_6,
+    Icons.brightness_7,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -216,6 +225,59 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
 
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            child: Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.blueAccent,
+                    Colors.lightBlueAccent
+                  ],
+                ),
+              ),
+              child: Icon(
+                Icons.add,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          bottomNavigationBar: AnimatedBottomNavigationBar.builder(
+            height: 70,
+            itemCount: iconList.length,
+            tabBuilder: (int index, bool isActive) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    iconList[index],
+                    size: 24,
+                  ),
+                  const SizedBox(height: 4),
+
+                ],
+              );
+            },
+            backgroundColor: Colors.white,
+            activeIndex: _bottomNavIndex,
+            splashSpeedInMilliseconds: 300,
+            notchSmoothness: NotchSmoothness.softEdge,
+            gapLocation: GapLocation.center,
+            leftCornerRadius: 32,
+            rightCornerRadius: 32,
+            onTap: (index) => setState(() => _bottomNavIndex = index),
+            shadow: BoxShadow(
+              offset: Offset(0, 1),
+              blurRadius: 12,
+              spreadRadius: 0.5,
+              color: Colors.grey,
+            ),
+          ),
         ),
       ),
     );
