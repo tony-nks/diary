@@ -3,7 +3,9 @@ import 'package:diary/widgets/app_bar.dart';
 import 'package:diary/widgets/body_measurement.dart';
 import 'package:diary/widgets/meals_today.dart';
 import 'package:diary/widgets/statistics.dart';
+import 'package:diary/widgets/text_divider.dart';
 import 'package:diary/widgets/water.dart';
+import 'package:diary/widgets/water_notification.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,7 +16,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   var _bottomNavIndex = 0;
   final iconList = <IconData>[
     Icons.brightness_5,
@@ -45,97 +46,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     shrinkWrap: true,
                     children: [
                       // Текст Mediterranean diet - details
-                      Padding(
-                        padding: const EdgeInsets.only(left: 28.0, right: 28.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 5.0, vertical: 10),
-                              child: Text(
-                                'Mediterranean diet',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                  color: Color.fromRGBO(55, 18, 100, 1),
-                                  fontFamily: "BalooChettan2",
-                                ),
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                SizedBox(
-                                  width: 90,
-                                ),
-                                Text(
-                                  'Details',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 14,
-                                    color: Colors.blue,
-                                    fontFamily: "BalooChettan2",
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Icon(Icons.arrow_forward,
-                                    size: 16, color: Colors.blueGrey),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
+                      TextDivider(title: 'Mediterranean diet', link: 'Details', iconData: Icons.arrow_forward),
                       // Статистика какая-то
                       Statistics(),
                       SizedBox(height: 10),
 
                       // Текст Meals today - Customize
-                      Padding(
-                        padding: const EdgeInsets.only(left: 28.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 5.0, vertical: 10),
-                              child: Text(
-                                'Meals today',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                  color: Color.fromRGBO(55, 18, 100, 1),
-                                  fontFamily: "BalooChettan2",
-                                ),
-                              ),
-                            ),
-                            Container(
-                              child: Row(
-                                children: [
-                                  Text(
-                                    'Customize',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.blue,
-                                      fontFamily: "BalooChettan2",
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Icon(Icons.arrow_forward,
-                                      size: 16, color: Colors.blueGrey),
-                                  SizedBox(
-                                    width: 30,
-                                  )
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      TextDivider(title: 'Meals today', link: 'Customize', iconData: Icons.arrow_forward),
 
                       //Контейнеры красивые не понятные
                       SingleChildScrollView(
@@ -172,50 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(height: 10),
 
                       // Текст Body measurement - Today
-                      Padding(
-                        padding: const EdgeInsets.only(left: 28.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 5.0, vertical: 10),
-                              child: Text(
-                                'Body measurement',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                  color: Color.fromRGBO(55, 18, 100, 1),
-                                  fontFamily: "BalooChettan2",
-                                ),
-                              ),
-                            ),
-                            Container(
-                              child: Row(
-                                children: [
-                                  Text(
-                                    'Today',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.blue,
-                                      fontFamily: "BalooChettan2",
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Icon(Icons.arrow_forward,
-                                      size: 16, color: Colors.blueGrey),
-                                  SizedBox(
-                                    width: 30,
-                                  )
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      TextDivider(title: 'Body measurement', link: 'Today', iconData: Icons.arrow_forward),
                       SizedBox(height: 10),
 
                       //карточка с циферками
@@ -223,62 +97,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(height: 10),
 
                       //Текст Water - Aqua SmartBattle
-                      Padding(
-                        padding: const EdgeInsets.only(left: 28.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 5.0, vertical: 10),
-                              child: Text(
-                                'Water',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                  color: Color.fromRGBO(55, 18, 100, 1),
-                                  fontFamily: "BalooChettan2",
-                                ),
-                              ),
-                            ),
-                            Container(
-                              child: Row(
-                                children: [
-                                  Text(
-                                    'Aqua Smart Battle',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.blue,
-                                      fontFamily: "BalooChettan2",
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Icon(Icons.keyboard_capslock,
-                                      size: 16, color: Colors.blueGrey),
-                                  SizedBox(
-                                    width: 30,
-                                  )
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      TextDivider(title: 'Water', link: 'Aqua Smart Bottle', iconData: Icons.add,),
 
                       //Water Widget
                       WaterWidget(),
+                      SizedBox(height: 20),
+
+                      //табличка со стаканчиком
+                      WaterNotification(),
                     ],
                   ),
                 ),
               ),
-
-
             ],
           ),
-
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
             child: Container(
@@ -287,10 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
-                  colors: [
-                    Colors.blueAccent,
-                    Colors.lightBlueAccent
-                  ],
+                  colors: [Colors.blueAccent, Colors.lightBlueAccent],
                 ),
               ),
               child: Icon(
@@ -299,7 +128,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
           bottomNavigationBar: AnimatedBottomNavigationBar.builder(
             height: 70,
             itemCount: iconList.length,
@@ -313,7 +143,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     size: 24,
                   ),
                   const SizedBox(height: 4),
-
                 ],
               );
             },
