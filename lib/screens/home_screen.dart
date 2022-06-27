@@ -1,5 +1,4 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:diary/widgets/app_bar.dart';
 import 'package:diary/widgets/body_measurement.dart';
 import 'package:diary/widgets/meals_today.dart';
 import 'package:diary/widgets/statistics.dart';
