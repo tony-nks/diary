@@ -6,6 +6,7 @@ import 'package:diary/widgets/statistics.dart';
 import 'package:diary/widgets/text_divider.dart';
 import 'package:diary/widgets/water.dart';
 import 'package:diary/widgets/water_notification.dart';
+import 'package:fluent_appbar/fluent_appbar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -23,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Icons.brightness_6,
     Icons.brightness_7,
   ];
-
+  final ScrollController scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,12 +34,79 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       home: SafeArea(
         child: Scaffold(
+          extendBodyBehindAppBar: true,
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0.0,
+            flexibleSpace: Container(
+              height: 60,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black26,
+                    offset: Offset(3, 5),
+                    spreadRadius: -5,
+                    blurRadius: 5,
+                  )
+                ]
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'My Diary',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Color.fromRGBO(55, 18, 100, 1),
+                          fontFamily: "BalooChettan2"),
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.arrow_back_ios,
+                          size: 16,
+                          color: Color.fromRGBO(55, 18, 100, 1),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Icon(Icons.calendar_today_outlined,
+                            size: 14,
+                            color: Color.fromRGBO(55, 18, 100, 1)),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          '15 May',
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Color.fromRGBO(55, 18, 100, 1),
+                              fontFamily: "BalooChettan2",
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Icon(Icons.arrow_forward_ios,
+                            size: 16, color: Color.fromRGBO(55, 18, 100, 1)),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
           backgroundColor: Color.fromRGBO(240, 240, 240, 1),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // appBar
-              CustomAppBar(),
+              //CustomAppBar(),
               Expanded(
                 child: SizedBox(
                   child: ListView(
