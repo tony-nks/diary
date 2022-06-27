@@ -5,7 +5,6 @@ import 'package:diary/widgets/statistics.dart';
 import 'package:diary/widgets/text_divider.dart';
 import 'package:diary/widgets/water.dart';
 import 'package:diary/widgets/water_notification.dart';
-import 'package:fluent_appbar/fluent_appbar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
