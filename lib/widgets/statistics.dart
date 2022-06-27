@@ -27,8 +27,6 @@ class _StatisticsState extends State<Statistics> {
     return Padding(
       padding: const EdgeInsets.only(left: 28.0, right: 28.0),
       child: Container(
-        height: 250,
-        width: 330,
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(

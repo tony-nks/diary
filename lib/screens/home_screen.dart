@@ -3,6 +3,7 @@ import 'package:diary/widgets/app_bar.dart';
 import 'package:diary/widgets/body_measurement.dart';
 import 'package:diary/widgets/meals_today.dart';
 import 'package:diary/widgets/statistics.dart';
+import 'package:diary/widgets/water.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -169,6 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       SizedBox(height: 10),
+
                       // Текст Body measurement - Today
                       Padding(
                         padding: const EdgeInsets.only(left: 28.0),
@@ -215,7 +217,59 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       SizedBox(height: 10),
+
+                      //карточка с циферками
                       BodyMeasurement(),
+                      SizedBox(height: 10),
+
+                      //Текст Water - Aqua SmartBattle
+                      Padding(
+                        padding: const EdgeInsets.only(left: 28.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 5.0, vertical: 10),
+                              child: Text(
+                                'Water',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: Color.fromRGBO(55, 18, 100, 1),
+                                  fontFamily: "BalooChettan2",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'Aqua Smart Battle',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                      color: Colors.blue,
+                                      fontFamily: "BalooChettan2",
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Icon(Icons.keyboard_capslock,
+                                      size: 16, color: Colors.blueGrey),
+                                  SizedBox(
+                                    width: 30,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      //Water Widget
+                      WaterWidget(),
                     ],
                   ),
                 ),

@@ -13,8 +13,6 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
     return Padding(
       padding: const EdgeInsets.only(left: 28.0, right: 28.0),
       child: Container(
-        height: 250,
-        width: 330,
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
@@ -37,96 +35,146 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
             children: [
               // первая часть
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  //две фигни слева, колории вроде
+                  //Weight чего-то
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      //первая фигня
-                      Row(
-                        children: [
-                          Container(
-                            width: 2,
-                            height: 40,
-                            color: Colors.blue[100],
-                          ),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Eaten',style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, fontFamily: "BalooChettan2", color: Colors.grey[400]),),
-                              SizedBox(height: 5),
-                              Row(
-                                children: [
-                                  Image.asset('assets/icons/eaten.png'),
-                                  SizedBox(width: 10),
-                                  Text('1127', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, fontFamily: "BalooChettan2", color: Color.fromRGBO(55, 18, 100,  1)),),
-                                  SizedBox(width: 10),
-                                  Text('kcal', style: TextStyle(color: Colors.grey[400], fontFamily: "BalooChettan2"),)
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
+                      Text(
+                        'Weight',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                          color: Color.fromRGBO(55, 18, 100, 1),
+                          fontFamily: "BalooChettan2",
+                        ),
                       ),
-                      SizedBox(height: 20),
-                      //вторая фигня
+
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          Container(
-                            width: 2,
-                            height: 40,
-                            color: Colors.blue[100],
+                          Text(
+                            '206.8',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 38,
+                              color: Color.fromRGBO(55, 18, 100, 1),
+
+                            ),
                           ),
                           SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Eaten',style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, fontFamily: "BalooChettan2", color: Colors.grey[400]),),
-                              SizedBox(height: 5),
-                              Row(
-                                children: [
-                                  Image.asset('assets/icons/burned.png'),
-                                  SizedBox(width: 10),
-                                  Text('102', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, fontFamily: "BalooChettan2", color: Color.fromRGBO(55, 18, 100,  1)),),
-                                  SizedBox(width: 10),
-                                  Text('kcal', style: TextStyle(color: Colors.grey[400], fontFamily: "BalooChettan2"),)
-                                ],
-                              ),
-                            ],
+                          Text(
+                            'lbs',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: Color.fromRGBO(55, 18, 100, 1),
+
+                            ),
                           ),
                         ],
                       ),
                     ],
                   ),
-                  SizedBox(width: 55),
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.access_time, size: 20, color: Colors.blueGrey,),
+                          SizedBox(width: 5),
+                          Text('Today 8:26 AM',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.blueGrey,
+                              fontFamily: "BalooChettan2",
+                            ),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(width: 10),
+                          Text('InBody SmartScale',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.blue,
+                              fontFamily: "BalooChettan2",
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ],
               ),
+              SizedBox(height: 5),
               Divider(),
+              SizedBox(height: 15),
               // вторая часть нижняя
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
-                        height: 6,
+                      Text('185 cm',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          fontFamily: "BalooChettan2",
+                        ),
                       ),
-                      Stack(
-                        children: [
-                          Container(
-                            height: 50,
-                            width: 70,
-                          ),
-                          Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
-                          Positioned(
-                              top: 30,
-                              child: Text('12g left', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11, fontFamily: "BalooChettan2", color: Colors.grey),))
-                        ],
+                      Text('Height',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                          color: Colors.blueGrey,
+                        ),
                       ),
                     ],
                   ),
-
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('27.3 BMI',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          fontFamily: "BalooChettan2",
+                        ),
+                      ),
+                      Text('Overweight',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                          color: Colors.blueGrey,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('20%',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          fontFamily: "BalooChettan2",
+                        ),
+                      ),
+                      Text('Body fat',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                          color: Colors.blueGrey,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ],
