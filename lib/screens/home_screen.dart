@@ -16,11 +16,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   var _bottomNavIndex = 0;
-  final iconList = <IconData>[
-    Icons.brightness_5,
-    Icons.brightness_4,
-    Icons.brightness_6,
-    Icons.brightness_7,
+  final iconList = <String>[
+    'assets/menu/book.png',
+    'assets/menu/sneakers.png',
+    'assets/menu/apple.png',
+    'assets/menu/profile.png',
   ];
   final ScrollController scrollController = ScrollController();
   @override
@@ -197,17 +197,14 @@ class _HomeScreenState extends State<HomeScreen> {
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
           bottomNavigationBar: AnimatedBottomNavigationBar.builder(
-            height: 70,
+            height: 60,
             itemCount: iconList.length,
             tabBuilder: (int index, bool isActive) {
               return Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    iconList[index],
-                    size: 24,
-                  ),
+                  Image.asset(iconList[index], scale: 24,),
                   const SizedBox(height: 4),
                 ],
               );
