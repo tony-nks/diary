@@ -27,7 +27,7 @@ class _StatisticsState extends State<Statistics> {
     return Padding(
       padding: const EdgeInsets.only(left: 28.0, right: 28.0),
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(10),
@@ -62,18 +62,18 @@ class _StatisticsState extends State<Statistics> {
                             height: 40,
                             color: Colors.blue[100],
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Eaten',style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, fontFamily: "BalooChettan2", color: Colors.grey[400]),),
-                              SizedBox(height: 5),
+                              const SizedBox(height: 5),
                               Row(
                                 children: [
                                   Image.asset('assets/icons/eaten.png'),
-                                  SizedBox(width: 10),
-                                  Text('1127', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, fontFamily: "BalooChettan2", color: Color.fromRGBO(55, 18, 100,  1)),),
-                                  SizedBox(width: 10),
+                                  const SizedBox(width: 10),
+                                  const Text('1127', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, fontFamily: "BalooChettan2", color: Color.fromRGBO(55, 18, 100,  1)),),
+                                  const SizedBox(width: 10),
                                   Text('kcal', style: TextStyle(color: Colors.grey[400], fontFamily: "BalooChettan2"),)
                                 ],
                               ),
@@ -81,7 +81,7 @@ class _StatisticsState extends State<Statistics> {
                           ),
                         ],
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       //вторая фигня
                       Row(
                         children: [
@@ -90,18 +90,18 @@ class _StatisticsState extends State<Statistics> {
                             height: 40,
                             color: Colors.blue[100],
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Eaten',style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, fontFamily: "BalooChettan2", color: Colors.grey[400]),),
-                              SizedBox(height: 5),
+                              const SizedBox(height: 5),
                               Row(
                                 children: [
                                   Image.asset('assets/icons/burned.png'),
-                                  SizedBox(width: 10),
-                                  Text('102', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, fontFamily: "BalooChettan2", color: Color.fromRGBO(55, 18, 100,  1)),),
-                                  SizedBox(width: 10),
+                                  const SizedBox(width: 10),
+                                  const Text('102', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, fontFamily: "BalooChettan2", color: Color.fromRGBO(55, 18, 100,  1)),),
+                                  const SizedBox(width: 10),
                                   Text('kcal', style: TextStyle(color: Colors.grey[400], fontFamily: "BalooChettan2"),)
                                 ],
                               ),
@@ -111,7 +111,7 @@ class _StatisticsState extends State<Statistics> {
                       ),
                     ],
                   ),
-                  SizedBox(width: 55),
+                  const SizedBox(width: 55),
                   //кружочек справа
                   const SimpleCircularProgressBar(
                     progressStrokeWidth: 15,
@@ -121,23 +121,23 @@ class _StatisticsState extends State<Statistics> {
                   )
                 ],
               ),
-              Divider(),
+              const Divider(),
               // вторая часть нижняя
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 6,
                       ),
                       Stack(
                         children: [
-                          Container(
+                          const SizedBox(
                             height: 50,
                             width: 70,
                           ),
-                          Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
+                          const Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
                           Positioned(
                             top: 19,
                             left: -10,
@@ -146,7 +146,7 @@ class _StatisticsState extends State<Statistics> {
                               lineHeight: 7.0,
                               percent: 0.8,
                               backgroundColor: Colors.grey[100],
-                              linearGradient: LinearGradient(
+                              linearGradient: const LinearGradient(
                                 begin: Alignment.centerLeft,
                                 end: Alignment.centerRight,
                                 colors: <Color>[
@@ -155,10 +155,10 @@ class _StatisticsState extends State<Statistics> {
                                 ], // Gradient from https://learnui.design/tools/gradient-generator.html
                                 tileMode: TileMode.mirror,
                               ),
-                              barRadius: Radius.circular(25),
+                              barRadius: const Radius.circular(25),
                             ),
                           ),
-                          Positioned(
+                          const Positioned(
                               top: 30,
                               child: Text('12g left', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11, fontFamily: "BalooChettan2", color: Colors.grey),))
                         ],
@@ -167,16 +167,16 @@ class _StatisticsState extends State<Statistics> {
                   ),
                   Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 6,
                       ),
                       Stack(
                         children: [
-                          Container(
+                          const SizedBox(
                             height: 50,
                             width: 70,
                           ),
-                          Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
+                          const Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
                           Positioned(
                             top: 19,
                             left: -10,
@@ -194,10 +194,10 @@ class _StatisticsState extends State<Statistics> {
                                 ], // Gradient from https://learnui.design/tools/gradient-generator.html
                                 tileMode: TileMode.mirror,
                               ),
-                              barRadius: Radius.circular(25),
+                              barRadius: const Radius.circular(25),
                             ),
                           ),
-                          Positioned(
+                          const Positioned(
                               top: 30,
                               child: Text('12g left', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11, fontFamily: "BalooChettan2", color: Colors.grey),))
                         ],
@@ -206,16 +206,16 @@ class _StatisticsState extends State<Statistics> {
                   ),
                   Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 6,
                       ),
                       Stack(
                         children: [
-                          Container(
+                          const SizedBox(
                             height: 50,
                             width: 70,
                           ),
-                          Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
+                          const Text('Carbs', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, fontFamily: "BalooChettan2", color: Color.fromRGBO(1, 50, 150,  1)),),
                           Positioned(
                             top: 19,
                             left: -10,
@@ -224,7 +224,7 @@ class _StatisticsState extends State<Statistics> {
                               lineHeight: 7.0,
                               percent: 0.4,
                               backgroundColor: Colors.grey[100],
-                              linearGradient: LinearGradient(
+                              linearGradient: const LinearGradient(
                                 begin: Alignment.centerLeft,
                                 end: Alignment.centerRight,
                                 colors: <Color>[
@@ -233,10 +233,10 @@ class _StatisticsState extends State<Statistics> {
                                 ], // Gradient from https://learnui.design/tools/gradient-generator.html
                                 tileMode: TileMode.mirror,
                               ),
-                              barRadius: Radius.circular(25),
+                              barRadius: const Radius.circular(25),
                             ),
                           ),
-                          Positioned(
+                          const Positioned(
                               top: 30,
                               child: Text('12g left', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11, fontFamily: "BalooChettan2", color: Colors.grey),))
                         ],

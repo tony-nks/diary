@@ -14,7 +14,7 @@ class _WaterWidgetState extends State<WaterWidget> {
     return Padding(
       padding: const EdgeInsets.only(left: 28.0, right: 28.0),
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(10),
@@ -45,7 +45,7 @@ class _WaterWidgetState extends State<WaterWidget> {
                     children: [
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
+                        children: const [
                           Text('2100',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class _WaterWidgetState extends State<WaterWidget> {
                           )
                         ],
                       ),
-                      Text('of daily goal 3.5L',
+                      const Text('of daily goal 3.5L',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -74,15 +74,15 @@ class _WaterWidgetState extends State<WaterWidget> {
                   ),
 
                   // разделитель
-                  Divider(),
+                  const Divider(),
 
                   //часть вторая
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       Row(
-                        children: [
+                        children: const [
                           Icon(Icons.access_time, size: 20, color: Colors.blueGrey,),
                           SizedBox(width: 5),
                           Text('Last drink 8:26 AM',
@@ -95,9 +95,9 @@ class _WaterWidgetState extends State<WaterWidget> {
                           )
                         ],
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Row(
-                        children: [
+                        children: const [
                           Icon(Icons.notifications_active, size: 20, color: Colors.blueGrey,),
                           SizedBox(width: 5),
                           Text('Your bottle is empty, refill it!',
@@ -118,7 +118,7 @@ class _WaterWidgetState extends State<WaterWidget> {
               //плюсик и минус
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
+                child: SizedBox(
                   height: 140,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -129,7 +129,7 @@ class _WaterWidgetState extends State<WaterWidget> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50),
                           color: Colors.white,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black38,
                               blurRadius: 5,
@@ -137,7 +137,7 @@ class _WaterWidgetState extends State<WaterWidget> {
                             )
                           ]
                         ),
-                        child: Icon(Icons.add, color: Colors.blueAccent, size: 15,),
+                        child: const Icon(Icons.add, color: Colors.blueAccent, size: 15,),
                       ),
                       Container(
                         height: 25,
@@ -145,7 +145,7 @@ class _WaterWidgetState extends State<WaterWidget> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50),
                           color: Colors.white,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black38,
                               blurRadius: 5,
@@ -153,7 +153,7 @@ class _WaterWidgetState extends State<WaterWidget> {
                             )
                           ]
                         ),
-                        child: Icon(Icons.remove, color: Colors.blueAccent, size: 15,),
+                        child: const Icon(Icons.remove, color: Colors.blueAccent, size: 15,),
                       )
                     ],
                   ),
@@ -161,19 +161,19 @@ class _WaterWidgetState extends State<WaterWidget> {
               ),
 
               // капсула с водой
-              Container(
+              SizedBox(
                 width: 60,
                 height: 135.0,
                 //padding: EdgeInsets.symmetric(horizontal: 24.0),
                 child: LiquidLinearProgressIndicator(
                   value: 0.6,
                   direction: Axis.vertical,
-                  backgroundColor: Color.fromRGBO(0, 20, 200, 0.1),
-                  valueColor: AlwaysStoppedAnimation(Colors.blue),
+                  backgroundColor: const Color.fromRGBO(0, 20, 200, 0.1),
+                  valueColor: const AlwaysStoppedAnimation(Colors.blue),
                   borderRadius: 35.0,
                   borderColor: Colors.white,
                   borderWidth: 1.0,
-                  center: Text(
+                  center: const Text(
                     "60%",
                     style: TextStyle(
                       color: Colors.lightBlueAccent,

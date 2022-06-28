@@ -13,7 +13,7 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
     return Padding(
       padding: const EdgeInsets.only(left: 28.0, right: 28.0),
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(10),
@@ -42,7 +42,7 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Weight',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -54,7 +54,7 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
 
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
+                        children: const [
                           Text(
                             '206.8',
                             style: TextStyle(
@@ -81,7 +81,7 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                   Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Icon(Icons.access_time, size: 20, color: Colors.blueGrey,),
                           SizedBox(width: 5),
                           Text('Today 8:26 AM',
@@ -95,7 +95,7 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBox(width: 10),
                           Text('InBody SmartScale',
                             style: TextStyle(
@@ -111,16 +111,16 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                   ),
                 ],
               ),
-              SizedBox(height: 5),
-              Divider(),
-              SizedBox(height: 15),
+              const SizedBox(height: 5),
+              const Divider(),
+              const SizedBox(height: 15),
               // вторая часть нижняя
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text('185 cm',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -139,7 +139,7 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text('27.3 BMI',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -158,7 +158,7 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text('20%',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,

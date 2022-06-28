@@ -19,7 +19,7 @@ class TextDivider extends StatelessWidget {
                 horizontal: 5.0, vertical: 10),
             child: Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
                 color: Color.fromRGBO(55, 18, 100, 1),
@@ -27,28 +27,26 @@ class TextDivider extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            child: Row(
-              children: [
-                Text(
-                  link,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.blue,
-                    fontFamily: "BalooChettan2",
-                  ),
+          Row(
+            children: [
+              Text(
+                link,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: Colors.blue,
+                  fontFamily: "BalooChettan2",
                 ),
-                SizedBox(
-                  width: 10,
-                ),
-                Icon(iconData,
-                    size: 16, color: Colors.blueGrey),
-                SizedBox(
-                  width: 30,
-                )
-              ],
-            ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Icon(iconData,
+                  size: 16, color: Colors.blueGrey),
+              const SizedBox(
+                width: 30,
+              )
+            ],
           ),
         ],
       ),

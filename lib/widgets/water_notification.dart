@@ -27,7 +27,7 @@ class _WaterNotificationState extends State<WaterNotification> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
-                  children: [
+                  children: const [
                     SizedBox(width: 70),
                     Text(
                       'Text text text text\nText',

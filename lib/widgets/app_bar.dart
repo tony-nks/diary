@@ -16,7 +16,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          const Text(
             'My Diary',
             style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -26,21 +26,21 @@ class _CustomAppBarState extends State<CustomAppBar> {
           ),
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.arrow_back_ios,
                 size: 16,
                 color: Color.fromRGBO(55, 18, 100, 1),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
-              Icon(Icons.calendar_today_outlined,
+              const Icon(Icons.calendar_today_outlined,
                   size: 14,
                   color: Color.fromRGBO(55, 18, 100, 1)),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
-              Text(
+              const Text(
                 '15 May',
                 style: TextStyle(
                     fontSize: 14,
@@ -48,10 +48,10 @@ class _CustomAppBarState extends State<CustomAppBar> {
                     fontFamily: "BalooChettan2",
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
-              Icon(Icons.arrow_forward_ios,
+              const Icon(Icons.arrow_forward_ios,
                   size: 16, color: Color.fromRGBO(55, 18, 100, 1)),
             ],
           ),

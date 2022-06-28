@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
             elevation: 0.0,
             flexibleSpace: Container(
               height: 60,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35)),
                 boxShadow: [
@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'My Diary',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontFamily: "BalooChettan2"),
                     ),
                     Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.arrow_back_ios,
                           size: 16,
@@ -99,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          backgroundColor: Color.fromRGBO(240, 240, 240, 1),
+          backgroundColor: const Color.fromRGBO(240, 240, 240, 1),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -112,13 +112,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     shrinkWrap: true,
                     children: [
                       // Текст Mediterranean diet - details
-                      TextDivider(title: 'Mediterranean diet', link: 'Details', iconData: Icons.arrow_forward),
+                      const TextDivider(title: 'Mediterranean diet', link: 'Details', iconData: Icons.arrow_forward),
                       // Статистика какая-то
-                      Statistics(),
-                      SizedBox(height: 10),
+                      const Statistics(),
+                      const SizedBox(height: 10),
 
                       // Текст Meals today - Customize
-                      TextDivider(title: 'Meals today', link: 'Customize', iconData: Icons.arrow_forward),
+                      const TextDivider(title: 'Meals today', link: 'Customize', iconData: Icons.arrow_forward),
 
                       //Контейнеры красивые не понятные
                       SingleChildScrollView(
@@ -152,25 +152,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
 
                       // Текст Body measurement - Today
-                      TextDivider(title: 'Body measurement', link: 'Today', iconData: Icons.arrow_forward),
-                      SizedBox(height: 10),
+                      const TextDivider(title: 'Body measurement', link: 'Today', iconData: Icons.arrow_forward),
+                      const SizedBox(height: 10),
 
                       //карточка с циферками
-                      BodyMeasurement(),
-                      SizedBox(height: 10),
+                      const BodyMeasurement(),
+                      const SizedBox(height: 10),
 
                       //Текст Water - Aqua SmartBattle
-                      TextDivider(title: 'Water', link: 'Aqua Smart Bottle', iconData: Icons.add,),
+                      const TextDivider(title: 'Water', link: 'Aqua Smart Bottle', iconData: Icons.add,),
 
                       //Water Widget
-                      WaterWidget(),
-                      SizedBox(height: 20),
+                      const WaterWidget(),
+                      const SizedBox(height: 20),
 
                       //табличка со стаканчиком
-                      WaterNotification(),
+                      const WaterNotification(),
                     ],
                   ),
                 ),
@@ -182,13 +182,13 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Container(
               height: 60,
               width: 60,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
                   colors: [Colors.blueAccent, Colors.lightBlueAccent],
                 ),
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.add,
                 color: Colors.white,
               ),
@@ -217,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
             leftCornerRadius: 32,
             rightCornerRadius: 32,
             onTap: (index) => setState(() => _bottomNavIndex = index),
-            shadow: BoxShadow(
+            shadow: const BoxShadow(
               offset: Offset(0, 1),
               blurRadius: 12,
               spreadRadius: 0.5,
