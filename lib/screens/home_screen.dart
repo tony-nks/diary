@@ -32,148 +32,152 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       home: SafeArea(
         child: Scaffold(
-          extendBodyBehindAppBar: true,
-          appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0.0,
-            flexibleSpace: Container(
-              height: 60,
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35)),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black26,
-                    offset: Offset(3, 5),
-                    spreadRadius: -5,
-                    blurRadius: 5,
-                  )
-                ]
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      'My Diary',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
-                          color: Color.fromRGBO(55, 18, 100, 1),
-                          fontFamily: "BalooChettan2"),
-                    ),
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.arrow_back_ios,
-                          size: 16,
-                          color: Color.fromRGBO(55, 18, 100, 1),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Icon(Icons.calendar_today_outlined,
-                            size: 14,
-                            color: Color.fromRGBO(55, 18, 100, 1)),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          '15 May',
-                          style: TextStyle(
-                              fontSize: 14,
-                              color: Color.fromRGBO(55, 18, 100, 1),
-                              fontFamily: "BalooChettan2",
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Icon(Icons.arrow_forward_ios,
-                            size: 16, color: Color.fromRGBO(55, 18, 100, 1)),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
           backgroundColor: const Color.fromRGBO(240, 240, 240, 1),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // appBar
-              //CustomAppBar(),
-              Expanded(
-                child: SizedBox(
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    shrinkWrap: true,
+          body: CustomScrollView(
+            physics: const BouncingScrollPhysics(),
+            slivers: [
+              SliverAppBar(
+                toolbarHeight: 70,
+                title: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 8.0, horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Текст Mediterranean diet - details
-                      const TextDivider(title: 'Mediterranean diet', link: 'Details', iconData: Icons.arrow_forward),
-                      // Статистика какая-то
-                      const Statistics(),
-                      const SizedBox(height: 10),
-
-                      // Текст Meals today - Customize
-                      const TextDivider(title: 'Meals today', link: 'Customize', iconData: Icons.arrow_forward),
-
-                      //Контейнеры красивые не понятные
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: const [
-                            SizedBox(width: 30),
-                            MealsToday(
-                              full: true,
-                              title: 'Breakfast',
-                              image: 'assets/images/Breakfast.png',
-                              kcal: '525',
-                              startColor: Color.fromRGBO(250, 120, 130, 1),
-                              endColor: Color.fromRGBO(253, 170, 148, 1),
-                            ),
-                            MealsToday(
-                              full: true,
-                              title: 'Lunch',
-                              image: 'assets/images/Lunch.png',
-                              kcal: '602',
-                              startColor: Color.fromRGBO(116, 139, 232, 1),
-                              endColor: Color.fromRGBO(92, 96, 223, 1),
-                            ),
-                            MealsToday(
-                                full: false,
-                                image: 'assets/images/Snack.png',
-                                title: 'Snack',
-                                kcal: '800',
-                                startColor: Color.fromRGBO(254, 149, 181, 1),
-                                endColor: Color.fromRGBO(250, 84, 134, 1))
-                          ],
-                        ),
+                      const Text(
+                        'My Diary',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                            color: Color.fromRGBO(55, 18, 100, 1),
+                            fontFamily: "BalooChettan2"),
                       ),
-                      const SizedBox(height: 10),
-
-                      // Текст Body measurement - Today
-                      const TextDivider(title: 'Body measurement', link: 'Today', iconData: Icons.arrow_forward),
-                      const SizedBox(height: 10),
-
-                      //карточка с циферками
-                      const BodyMeasurement(),
-                      const SizedBox(height: 10),
-
-                      //Текст Water - Aqua SmartBattle
-                      const TextDivider(title: 'Water', link: 'Aqua Smart Bottle', iconData: Icons.add,),
-
-                      //Water Widget
-                      const WaterWidget(),
-                      const SizedBox(height: 20),
-
-                      //табличка со стаканчиком
-                      const WaterNotification(),
+                      Row(
+                        children: const [
+                          Icon(
+                            Icons.arrow_back_ios,
+                            size: 16,
+                            color: Color.fromRGBO(55, 18, 100, 1),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(Icons.calendar_today_outlined,
+                              size: 14,
+                              color: Color.fromRGBO(55, 18, 100, 1)),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            '15 May',
+                            style: TextStyle(
+                                fontSize: 14,
+                                color: Color.fromRGBO(55, 18, 100, 1),
+                                fontFamily: "BalooChettan2",
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(Icons.arrow_forward_ios,
+                              size: 16,
+                              color: Color.fromRGBO(55, 18, 100, 1)),
+                        ],
+                      ),
                     ],
                   ),
                 ),
+                pinned: true,
+                expandedHeight: 80,
+                backgroundColor: Colors.white,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                    bottom: Radius.circular(20),
+                  ),
+                ),
+                flexibleSpace: FlexibleSpaceBar(
+                  background: Container(
+                    color: Color.fromRGBO(240, 240, 240, 1),
+                  ),
+                ),
+              ),
+              SliverList(
+                delegate: SliverChildListDelegate([
+                  // Текст Mediterranean diet - details
+                  const TextDivider(
+                      title: 'Mediterranean diet',
+                      link: 'Details',
+                      iconData: Icons.arrow_forward),
+                  // Статистика какая-то
+                  const Statistics(),
+                  const SizedBox(height: 10),
+
+                  // Текст Meals today - Customize
+                  const TextDivider(
+                      title: 'Meals today',
+                      link: 'Customize',
+                      iconData: Icons.arrow_forward),
+
+                  //Контейнеры красивые не понятные
+                  SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: const [
+                        SizedBox(width: 30),
+                        MealsToday(
+                          full: true,
+                          title: 'Breakfast',
+                          image: 'assets/images/Breakfast.png',
+                          kcal: '525',
+                          startColor: Color.fromRGBO(250, 120, 130, 1),
+                          endColor: Color.fromRGBO(253, 170, 148, 1),
+                        ),
+                        MealsToday(
+                          full: true,
+                          title: 'Lunch',
+                          image: 'assets/images/Lunch.png',
+                          kcal: '602',
+                          startColor: Color.fromRGBO(116, 139, 232, 1),
+                          endColor: Color.fromRGBO(92, 96, 223, 1),
+                        ),
+                        MealsToday(
+                            full: false,
+                            image: 'assets/images/Snack.png',
+                            title: 'Snack',
+                            kcal: '800',
+                            startColor: Color.fromRGBO(254, 149, 181, 1),
+                            endColor: Color.fromRGBO(250, 84, 134, 1))
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+
+                  // Текст Body measurement - Today
+                  const TextDivider(
+                      title: 'Body measurement',
+                      link: 'Today',
+                      iconData: Icons.arrow_forward),
+                  const SizedBox(height: 10),
+
+                  //карточка с циферками
+                  const BodyMeasurement(),
+                  const SizedBox(height: 10),
+
+                  //Текст Water - Aqua SmartBattle
+                  const TextDivider(
+                    title: 'Water',
+                    link: 'Aqua Smart Bottle',
+                    iconData: Icons.add,
+                  ),
+
+                  //Water Widget
+                  const WaterWidget(),
+                  const SizedBox(height: 20),
+
+                  //табличка со стаканчиком
+                  const WaterNotification(),
+                ]),
               ),
             ],
           ),
@@ -204,7 +208,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(iconList[index], scale: 24,),
+                  Image.asset(
+                    iconList[index],
+                    scale: 24,
+                  ),
                   const SizedBox(height: 4),
                 ],
               );
