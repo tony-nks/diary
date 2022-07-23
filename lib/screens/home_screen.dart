@@ -85,6 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
+
                 pinned: true,
                 expandedHeight: 80,
                 backgroundColor: Colors.white,
