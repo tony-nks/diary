@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class MealsToday extends StatelessWidget {
@@ -23,13 +21,34 @@ class MealsToday extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20.0),
+      padding: const EdgeInsets.only(right: 10.0),
       child: Stack(
         children: [
           const SizedBox(
-            height: 230,
-            width: 130,
+            height: 250,
+            width: 140,
           ),
+          Positioned(
+            bottom:20,
+              child: Container(
+                height: 210,
+              width: 140,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                    topRight: Radius.circular(50),
+                ),
+                color: Colors.transparent,
+                  boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        offset: Offset(1, 10),
+                        spreadRadius: -5,
+                        blurRadius: 5,
+              )
+            ]),
+          )),
           Positioned(
             top: 30,
             child: Stack(
@@ -38,20 +57,19 @@ class MealsToday extends StatelessWidget {
                   height: 200,
                   width: 130,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            startColor,
-                            endColor,
-                          ]),
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        topRight: Radius.circular(50),
-                        bottomLeft: Radius.circular(15),
-                        bottomRight: Radius.circular(15),
-                      ),
-
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          startColor,
+                          endColor,
+                        ]),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(15),
+                      topRight: Radius.circular(50),
+                      bottomLeft: Radius.circular(15),
+                      bottomRight: Radius.circular(15),
+                    ),
                   ),
                 ),
                 Positioned(
