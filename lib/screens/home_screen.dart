@@ -32,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       home: SafeArea(
         child: Scaffold(
+          extendBody: true,
           backgroundColor: const Color.fromRGBO(240, 240, 240, 1),
           body: CustomScrollView(
             physics: const BouncingScrollPhysics(),
@@ -85,7 +86,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-
                 pinned: true,
                 expandedHeight: 80,
                 backgroundColor: Colors.white,
@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 flexibleSpace: FlexibleSpaceBar(
                   background: Container(
-                    color: Color.fromRGBO(240, 240, 240, 1),
+                    color: const Color.fromRGBO(240, 240, 240, 1),
                   ),
                 ),
               ),
@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   //Контейнеры красивые не понятные
                   SingleChildScrollView(
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: const [

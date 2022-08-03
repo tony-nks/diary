@@ -51,27 +51,26 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                           fontFamily: "BalooChettan2",
                         ),
                       ),
-
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: const [
                           Text(
                             '206.8',
                             style: TextStyle(
+                              height: 1,
                               fontWeight: FontWeight.bold,
                               fontSize: 38,
                               color: Color.fromRGBO(55, 18, 100, 1),
-
                             ),
                           ),
                           SizedBox(width: 10),
                           Text(
                             'lbs',
                             style: TextStyle(
+                              height: 2.1,
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                               color: Color.fromRGBO(55, 18, 100, 1),
-
                             ),
                           ),
                         ],
@@ -82,9 +81,14 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                     children: [
                       Row(
                         children: const [
-                          Icon(Icons.access_time, size: 20, color: Colors.blueGrey,),
+                          Icon(
+                            Icons.access_time,
+                            size: 20,
+                            color: Colors.blueGrey,
+                          ),
                           SizedBox(width: 5),
-                          Text('Today 8:26 AM',
+                          Text(
+                            'Today 8:26 AM',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
@@ -97,7 +101,8 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                       Row(
                         children: const [
                           SizedBox(width: 10),
-                          Text('InBody SmartScale',
+                          Text(
+                            'InBody SmartScale',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
@@ -121,14 +126,16 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                      Text('185 cm',
+                      Text(
+                        '185 cm',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
                           fontFamily: "BalooChettan2",
                         ),
                       ),
-                      Text('Height',
+                      Text(
+                        'Height',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 12,
@@ -140,14 +147,16 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                      Text('27.3 BMI',
+                      Text(
+                        '27.3 BMI',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
                           fontFamily: "BalooChettan2",
                         ),
                       ),
-                      Text('Overweight',
+                      Text(
+                        'Overweight',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 12,
@@ -159,14 +168,16 @@ class _BodyMeasurementState extends State<BodyMeasurement> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                      Text('20%',
+                      Text(
+                        '20%',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
                           fontFamily: "BalooChettan2",
                         ),
                       ),
-                      Text('Body fat',
+                      Text(
+                        'Body fat',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 12,

@@ -31,7 +31,8 @@ class _WaterWidgetState extends State<WaterWidget> {
               )
             ]),
         child: Padding(
-          padding: const EdgeInsets.only(left: 28.0, right: 28.0, top: 28.0, bottom: 15.0),
+          padding: const EdgeInsets.only(
+              left: 28.0, right: 28.0, top: 28.0, bottom: 15.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -46,25 +47,29 @@ class _WaterWidgetState extends State<WaterWidget> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: const [
-                          Text('2100',
+                          Text(
+                            '2100',
                             style: TextStyle(
+                              height: 1,
                               fontWeight: FontWeight.bold,
                               fontSize: 38,
                               color: Color.fromRGBO(55, 18, 100, 1),
                             ),
                           ),
                           SizedBox(width: 5),
-                          Text('ml',
+                          Text(
+                            'ml',
                             style: TextStyle(
+                              height: 2,
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                               color: Color.fromRGBO(55, 18, 100, 1),
-
                             ),
                           )
                         ],
                       ),
-                      const Text('of daily goal 3.5L',
+                      const Text(
+                        'of daily goal 3.5L',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -83,9 +88,14 @@ class _WaterWidgetState extends State<WaterWidget> {
                       const SizedBox(height: 15),
                       Row(
                         children: const [
-                          Icon(Icons.access_time, size: 20, color: Colors.blueGrey,),
+                          Icon(
+                            Icons.access_time,
+                            size: 20,
+                            color: Colors.blueGrey,
+                          ),
                           SizedBox(width: 5),
-                          Text('Last drink 8:26 AM',
+                          Text(
+                            'Last drink 8:26 AM',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 10,
@@ -98,9 +108,14 @@ class _WaterWidgetState extends State<WaterWidget> {
                       const SizedBox(height: 5),
                       Row(
                         children: const [
-                          Icon(Icons.notifications_active, size: 20, color: Colors.blueGrey,),
+                          Icon(
+                            Icons.notifications_active,
+                            size: 20,
+                            color: Colors.blueGrey,
+                          ),
                           SizedBox(width: 5),
-                          Text('Your bottle is empty, refill it!',
+                          Text(
+                            'Your bottle is empty, refill it!',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 10,
@@ -127,33 +142,37 @@ class _WaterWidgetState extends State<WaterWidget> {
                         height: 25,
                         width: 25,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.white,
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black38,
-                              blurRadius: 5,
-                              offset: Offset(1,2)
-                            )
-                          ]
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.white,
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Colors.black38,
+                                  blurRadius: 5,
+                                  offset: Offset(1, 2))
+                            ]),
+                        child: const Icon(
+                          Icons.add,
+                          color: Colors.blueAccent,
+                          size: 15,
                         ),
-                        child: const Icon(Icons.add, color: Colors.blueAccent, size: 15,),
                       ),
                       Container(
                         height: 25,
                         width: 25,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.white,
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black38,
-                              blurRadius: 5,
-                              offset: Offset(1,2)
-                            )
-                          ]
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.white,
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Colors.black38,
+                                  blurRadius: 5,
+                                  offset: Offset(1, 2))
+                            ]),
+                        child: const Icon(
+                          Icons.remove,
+                          color: Colors.blueAccent,
+                          size: 15,
                         ),
-                        child: const Icon(Icons.remove, color: Colors.blueAccent, size: 15,),
                       )
                     ],
                   ),

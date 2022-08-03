@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 class TextDivider extends StatelessWidget {
-
   final String title;
   final String link;
   final IconData iconData;
-  const TextDivider({Key? key, required this.title, required this.link, required this.iconData}) : super(key: key);
+  const TextDivider(
+      {Key? key,
+      required this.title,
+      required this.link,
+      required this.iconData})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +19,7 @@ class TextDivider extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: 5.0, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 10),
             child: Text(
               title,
               style: const TextStyle(
@@ -41,8 +44,7 @@ class TextDivider extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              Icon(iconData,
-                  size: 16, color: Colors.blueGrey),
+              Icon(iconData, size: 16, color: Colors.blueGrey),
               const SizedBox(
                 width: 30,
               )

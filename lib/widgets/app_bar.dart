@@ -11,8 +11,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-      const EdgeInsets.symmetric(horizontal: 28.0, vertical: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 18),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -25,22 +24,21 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 fontFamily: "BalooChettan2"),
           ),
           Row(
-            children: [
-              const Icon(
+            children: const [
+              Icon(
                 Icons.arrow_back_ios,
                 size: 16,
                 color: Color.fromRGBO(55, 18, 100, 1),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 10,
               ),
-              const Icon(Icons.calendar_today_outlined,
-                  size: 14,
-                  color: Color.fromRGBO(55, 18, 100, 1)),
-              const SizedBox(
+              Icon(Icons.calendar_today_outlined,
+                  size: 14, color: Color.fromRGBO(55, 18, 100, 1)),
+              SizedBox(
                 width: 10,
               ),
-              const Text(
+              Text(
                 '15 May',
                 style: TextStyle(
                     fontSize: 14,
@@ -48,10 +46,10 @@ class _CustomAppBarState extends State<CustomAppBar> {
                     fontFamily: "BalooChettan2",
                     fontWeight: FontWeight.bold),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 10,
               ),
-              const Icon(Icons.arrow_forward_ios,
+              Icon(Icons.arrow_forward_ios,
                   size: 16, color: Color.fromRGBO(55, 18, 100, 1)),
             ],
           ),

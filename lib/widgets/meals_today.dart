@@ -29,26 +29,26 @@ class MealsToday extends StatelessWidget {
             width: 140,
           ),
           Positioned(
-            bottom:20,
+              bottom: 20,
               child: Container(
                 height: 210,
-              width: 140,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
-                    topRight: Radius.circular(50),
-                ),
-                color: Colors.transparent,
-                  boxShadow: [
+                width: 140,
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                      topRight: Radius.circular(50),
+                    ),
+                    color: Colors.transparent,
+                    boxShadow: [
                       BoxShadow(
                         color: Colors.black26,
                         offset: Offset(1, 10),
                         spreadRadius: -5,
                         blurRadius: 5,
-              )
-            ]),
-          )),
+                      )
+                    ]),
+              )),
           Positioned(
             top: 30,
             child: Stack(
